@@ -1,0 +1,74 @@
+[
+  {
+    "source": "the status code is (\\d+)",
+    "steps": [
+      {
+        "name": "the status code is 200",
+        "aggregatedDurations": {
+          "average": 0.033000242,
+          "median": 0.033000242
+        },
+        "durations": [
+          {
+            "duration": 0.033000242,
+            "location": "GetBookByISBN.feature:6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "response includes the following$",
+    "steps": [
+      {
+        "name": "response includes the following",
+        "aggregatedDurations": {
+          "average": 0.269383758,
+          "median": 0.269383758
+        },
+        "durations": [
+          {
+            "duration": 0.269383758,
+            "location": "GetBookByISBN.feature:7"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "a user retrieves the book by isbn",
+    "steps": [
+      {
+        "name": "a user retrieves the book by isbn",
+        "aggregatedDurations": {
+          "average": 1.324810666,
+          "median": 1.324810666
+        },
+        "durations": [
+          {
+            "duration": 1.324810666,
+            "location": "GetBookByISBN.feature:5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "a book exists with an isbn of (.*)",
+    "steps": [
+      {
+        "name": "a book exists with an isbn of 9781451648546",
+        "aggregatedDurations": {
+          "average": 0.468970181,
+          "median": 0.468970181
+        },
+        "durations": [
+          {
+            "duration": 0.468970181,
+            "location": "GetBookByISBN.feature:4"
+          }
+        ]
+      }
+    ]
+  }
+]

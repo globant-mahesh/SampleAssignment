@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestAll">
+
+   <test name="TC_01 Fetch all the employee details" >
+        <classes>
+            <class name="tests.SampleTest" >
+                    <methods>
+                      <include name="getAllEmployeeDetails"/>
+                    </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC_02 Fetch the employee details">
+        <classes>
+            <class name="tests.SampleTest" >
+                <methods>
+                    <include name="getEmployeeDetails"/>
+                    <include name="setEmployeeDetails"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC_03 Add the employee details">
+        <classes>
+            <class name="tests.SampleTest" >
+                <methods>
+                    <include name="setEmployeeDetails"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

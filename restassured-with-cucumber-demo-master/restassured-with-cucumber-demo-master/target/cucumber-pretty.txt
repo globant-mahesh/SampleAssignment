@@ -1,0 +1,37 @@
+Feature: Get book by ISBN
+
+  Scenario: User calls web service to get a book by its ISBN [90m# GetBookByISBN.feature:3[0m
+    [32mGiven [0m[32ma book exists with an isbn of [0m[32m[1m9781451648546[0m        [90m# BookStepDefinitions.a_book_exists_with_isbn(String)[0m
+    [32mWhen [0m[32ma user retrieves the book by isbn[0m                   [90m# BookStepDefinitions.a_user_retrieves_the_book_by_isbn()[0m
+    [32mThen [0m[32mthe status code is [0m[32m[1m200[0m                              [90m# BookStepDefinitions.verify_status_code(int)[0m
+    [32mAnd [0m[32mresponse includes the following[0m                      [90m# BookStepDefinitions.response_equals(String,String>)[0m
+    [31mAnd [0m[31mresponse includes the following in any order[0m         [90m# BookStepDefinitions.response_contains_in_any_order(String,String>)[0m
+      [31mjava.lang.AssertionError: 1 expectation failed.
+      JSON path items.volumeInfo.industryIdentifiers.type doesn't match.
+      Expected: iterable over ["ISBN_13,ISBN_10"] in any order
+        Actual: [[ISBN_13, ISBN_10]]
+      
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+      	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+      	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)
+      	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+      	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+      	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:451)
+      	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+      	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:613)
+      	at sun.reflect.GeneratedMethodAccessor25.invoke(Unknown Source)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+      	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+      	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+      	at io.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:251)
+      	at io.restassured.specification.ResponseSpecification$content$1.callCurrent(Unknown Source)
+      	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:234)
+      	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:268)
+      	at stepdefs.BookStepDefinitions.response_contains_in_any_order(BookStepDefinitions.java:63)
+      	at ✽.And response includes the following in any order(GetBookByISBN.feature:10)
+      [0m
